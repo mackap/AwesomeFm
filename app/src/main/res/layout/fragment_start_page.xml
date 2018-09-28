@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools">
+
+
+  <TextView
+    android:id="@+id/tv_start_fr_artists_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:padding="8dp"
+    android:text="@string/top_artists"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:visibility="gone"
+    tools:visibility="visible"/>
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rec_view_top_artists"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_below="@+id/tv_start_fr_artists_title"/>
+  <TextView
+    android:id="@+id/tv_start_fr_tracks_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rec_view_top_artists"
+    android:padding="8dp"
+    android:text="@string/top_tracks"
+    android:visibility="gone"
+    tools:visibility="visible"
+    />
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rec_view_top_tracks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_start_fr_tracks_title"
+    android:padding="8dp"/>
+  <FrameLayout
+    android:id="@+id/fr_layout_progress"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"/>
+  </FrameLayout>
+</RelativeLayout>
